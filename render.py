@@ -11,7 +11,7 @@ html_content = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدول اطلاعات</title>
+    <title>جدول اطلاعات شهرک صنعتی امیرکبیر</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css">
     <style>
@@ -26,7 +26,7 @@ html_content = f"""<!DOCTYPE html>
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="text-center mb-4">جدول اطلاعات</h2>
+    <h2 class="text-center mb-4">جدول اطلاعات شهرک صنعتی امیرکبیر</h2>
     <input type="text" id="searchInput" class="form-control search-input" placeholder="جستجو در جدول..." onkeyup="filterTable()">
     <table id="dataTable" class="table table-bordered table-hover text-center">
         <thead class="table-dark">
