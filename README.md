@@ -1,4 +1,4 @@
-# Amirkabir Industrial Town Database
+# Amirkabir Industrial Town Database بانک اطلاعات شهرک صنعتی امیرکبیر کاشان
 
 This repository contains a JSON dataset of businesses located in the Amirkabir Industrial Town in Kashan, Iran. The dataset includes details about various companies, their activities, contact information, and locations.
 
