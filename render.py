@@ -77,7 +77,7 @@ html_content += """        </tbody>
 </html>
 """
 
-file = open('table.html', 'w', encoding='utf-8')
+file = open('index.html', 'w', encoding='utf-8')
 file.write(html_content)
 
-print("HTML table with search functionality has been generated as 'table.html'.")
+print("HTML table with search functionality has been generated as 'index.html'.")

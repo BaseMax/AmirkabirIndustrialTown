@@ -2,7 +2,7 @@
 
 This repository contains a JSON dataset of businesses located in the Amirkabir Industrial Town in Kashan, Iran. The dataset includes details about various companies, their activities, contact information, and locations.
 
-Demo: https://basemax.github.io/AmirkabirIndustrialTown/table.html
+Demo: https://basemax.github.io/AmirkabirIndustrialTown/
 
 ## Dataset Structure
 
