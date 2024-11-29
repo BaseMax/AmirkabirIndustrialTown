@@ -13,11 +13,22 @@ html_content = f"""<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جدول اطلاعات</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css">
+    <style>
+        body {{
+            font-family: Vazirmatn, Arial, sans-serif;
+        }}
+        .search-input {{
+            margin-bottom: 20px;
+            max-width: 300px;
+        }}
+    </style>
 </head>
 <body>
 <div class="container mt-5">
     <h2 class="text-center mb-4">جدول اطلاعات</h2>
-    <table class="table table-bordered table-hover text-center">
+    <input type="text" id="searchInput" class="form-control search-input" placeholder="جستجو در جدول..." onkeyup="filterTable()">
+    <table id="dataTable" class="table table-bordered table-hover text-center">
         <thead class="table-dark">
             <tr>
 """
@@ -39,6 +50,28 @@ for row in rows:
 html_content += """        </tbody>
     </table>
 </div>
+<script>
+    function filterTable() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const table = document.getElementById('dataTable');
+        const rows = table.getElementsByTagName('tr');
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let rowContainsFilter = false;
+
+            for (let j = 0; j < cells.length; j++) {
+                if (cells[j].innerText.toLowerCase().includes(filter)) {
+                    rowContainsFilter = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = rowContainsFilter ? '' : 'none';
+        }
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
@@ -47,4 +80,4 @@ html_content += """        </tbody>
 file = open('table.html', 'w', encoding='utf-8')
 file.write(html_content)
 
-print("HTML table has been generated as 'table.html'.")
+print("HTML table with search functionality has been generated as 'table.html'.")
