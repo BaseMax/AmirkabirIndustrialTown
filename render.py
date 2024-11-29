@@ -42,10 +42,10 @@ html_content += """            </tr>
 """
 
 for row in rows:
-    html_content += "            <tr>\n"
+    html_content += "<tr>"
     for cell in row[1:]:
-        html_content += f"                <td>{cell if cell else ''}</td>\n"
-    html_content += "            </tr>\n"
+        html_content += f"<td>{cell if cell else ''}</td>"
+    html_content += "</tr>"
 
 html_content += """        </tbody>
     </table>
